@@ -1,13 +1,16 @@
 let tela = document.getElementById("tela");
-let currentInput = ""
-let currentOperator = ""
 
-function Numero1(value){
-    currentInput += value
-    tela.textContent = currentInput
-
+function Numero1(value) {
+    if (value === '=') {
+       
+        tela.textContent = eval(tela.textContent);
+    } else {
+       
+        tela.textContent += value;
+    }
 }
 
-function reset(value){
-    value = "  "
+function reset() {
+   
+    tela.textContent = "";
 }
